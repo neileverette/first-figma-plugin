@@ -4,30 +4,45 @@
 
 <h1>Petma plugin</h1>
 
+<!-- Input for post -->
 <div>
   <label for="username">Username</label>
-  <input class="input__field" type="text">
+  <input class="input__field" type="text" value="Your username" id="username">
   
   <label for="name">Name</label>
-  <input class="input__field" type="text">
+  <input class="input__field" type="text" value="Your name" id="name">
 
   <label for="description">Description</label>
-  <input class="textarea" type="textarea">
-
-  <button class='button button--primary'>Label</button> 
-
+  <input class="textarea" type="textarea" rows="2" value="Enter a post" id="description">
 </div>
 
+<!-- Switch for dark mode -->
+<div class="switch">
+  <input class="switch__toggle" type="checkbox" id="dark-mode-on">
+  <label class="switch__label" for="dark-mode-on">Dark mode</label>
+</div>
+
+<!-- Radio buttons for image -->
+<div class="radio">
+  <input id="radioButton1"type="radio" class="radio__button" name="variantGroup" >
+  <label for="radioButton1" class="radio__label">No image</label>
+
+  <input id="radioButton2"type="radio" class="radio__button" name="variantGroup" >
+  <label for="radioButton2" class="radio__label">Single image</label>
+
+  <input id="radioButton3"type="radio" class="radio__button" name="variantGroup" >
+  <label for="radioButton3" class="radio__label">Carousel</label>
+</div>
+  
+
+<!-- Primary -->
+<button class='button button--primary' id="submit-post">Submit post</button> 
+
+<!-- Styling for Figma UI -->
 <style>
 
 h1 {
     font-family: Helvetica, Arial, sans-serif;
-    font-size: 20px;
-    display: flex;
-    justify-content: left;
-    align-items: top;
-    background-color: rgb(255, 255, 255);
-    margin: 0px 0px 20px 0px;
   }
   input {
     display: block;
@@ -2052,6 +2067,12 @@ select.select-menu {
 }
 </style>
 
-
-
-  
+<!-- My styling-->
+<style>
+  body{
+    padding: 2em;
+  }
+  div{
+    margin: 1em;
+  }
+</style> 
