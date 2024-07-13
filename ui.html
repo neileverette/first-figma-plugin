@@ -7,13 +7,13 @@
 <!-- Input for post -->
 <div>
   <label for="username">Username</label>
-  <input class="input__field" type="text" value="Your username" id="username">
+  <input class="input__field" type="text" value="" id="username" placeholder="Username">
   
   <label for="name">Name</label>
-  <input class="input__field" type="text" value="Your name" id="name">
+  <input class="input__field" type="text" value="" id="name" placeholder="Name">
 
   <label for="description">Description</label>
-  <input class="textarea" type="textarea" rows="2" value="Enter a post" id="description">
+  <input class="textarea" type="textarea" rows="2" value="" id="description" placeholder="Description">
 </div>
 
 <!-- Switch for dark mode -->
@@ -37,6 +37,18 @@
 
 <!-- Primary -->
 <button class='button button--primary' id="submit-post">Submit post</button> 
+
+<script>
+  document.getElementById('submit-post').onclick = () => {
+    const name = document.getElementById('name').value;
+    const username = document.getElementById('username').value;
+    const description = document.getElementById('description').value;
+    console.log(name);
+    console.log(username);
+    console.log(description);
+    
+  }
+</script>
 
 <!-- Styling for Figma UI -->
 <style>
