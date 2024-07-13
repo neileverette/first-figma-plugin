@@ -6,7 +6,7 @@
 
 <!-- Input for post -->
 <div>
-  <label for="username">Username</label>
+  <label for="username">UserName</label>
   <input class="input__field" type="text" value="" id="username" placeholder="Username">
   
   <label for="name">Name</label>
@@ -43,14 +43,16 @@
     const name = document.getElementById('name').value;
     const username = document.getElementById('username').value;
     const description = document.getElementById('description').value;
-    const darkModeState = document.getElementById('dark-mode-on').value;
+    const darkModeState = document.getElementById('dark-mode-on').checked;
     const imageVariant = document.querySelector('input[name="variantGroup"]:checked').value;
 
-    console.log(name);
-    console.log(username);
-    console.log(description);
-    console.log(darkModeState);
-    console.log(imageVariant);
+    //console.log(name);
+    //console.log(username);
+    //console.log(description);
+    //console.log(darkModeState);
+    //console.log(imageVariant);
+
+    parent.postMessage({pluginMessage: {name, username, description, darkModeState, imageVariant}}, '*');
     }
 
 </script>
