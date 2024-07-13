@@ -24,13 +24,13 @@
 
 <!-- Radio buttons for image -->
 <div class="radio">
-  <input id="radioButton1"type="radio" class="radio__button" name="variantGroup" >
+  <input id="radioButton1"type="radio" class="radio__button" name="variantGroup" value="1">
   <label for="radioButton1" class="radio__label">No image</label>
 
-  <input id="radioButton2"type="radio" class="radio__button" name="variantGroup" >
+  <input id="radioButton2"type="radio" class="radio__button" name="variantGroup" value="2" >
   <label for="radioButton2" class="radio__label">Single image</label>
 
-  <input id="radioButton3"type="radio" class="radio__button" name="variantGroup" >
+  <input id="radioButton3"type="radio" class="radio__button" name="variantGroup" value="3">
   <label for="radioButton3" class="radio__label">Carousel</label>
 </div>
   
@@ -43,11 +43,16 @@
     const name = document.getElementById('name').value;
     const username = document.getElementById('username').value;
     const description = document.getElementById('description').value;
+    const darkModeState = document.getElementById('dark-mode-on').value;
+    const imageVariant = document.querySelector('input[name="variantGroup"]:checked').value;
+
     console.log(name);
     console.log(username);
     console.log(description);
-    
-  }
+    console.log(darkModeState);
+    console.log(imageVariant);
+    }
+
 </script>
 
 <!-- Styling for Figma UI -->
