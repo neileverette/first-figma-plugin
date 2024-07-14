@@ -6,16 +6,13 @@
   "capabilities": [],
   "enableProposedApi": false,
   "documentAccess": "dynamic-page",
-
-  
   "editorType": [
     "figma"
   ],
   "ui": "ui.html",
   "networkAccess": {
     "allowedDomains": [
-      "none"
+      "https://rsms.me"
     ]
   }
-
 }
