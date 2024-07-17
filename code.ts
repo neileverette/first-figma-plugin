@@ -10,32 +10,32 @@ figma.ui.onmessage = pluginMessage => {
     const defaultVariant = postComponentSet.defaultVariant as ComponentNode;
     const defaultDark = figma.root.findOne(node => node.type == "COMPONENT" && node.name == "Image=none, Dark mode=true") as ComponentNode;
 
-    if (pluginMessage.darkModeState){
+    if (pluginMessage.darkModeState) {
         switch(pluginMessage.imageVariant) {
-            case "2" :
+            case "2":
                 //create instance of dark mode, single image
                 break;
-            case "3" :
+            case "3":
                 //create instance of dark mode, carousel
                 break;
-            default :
+            default:
                 defaultDark.createInstance();
                 //create instance of dark mode, no image
                 break;
-        }
+        } 
     } else {
         switch(pluginMessage.imageVariant) {
-            case "2" :
-                //create instance of dark mode, single image
+            case "2":
+                //create instance of light mode, single image
                 break;
-            case "3" :
-                //create instance of dark mode, carousel
+            case "3":
+                //create instance of light mode, carousel
                 break;
-            default :
+            default:
                 defaultVariant.createInstance();
-                //create instance of dark mode, no image
+                //create instance of light mode, no image
                 break;
-        
+        }
     }
-
+    
 };
