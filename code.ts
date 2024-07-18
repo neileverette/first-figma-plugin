@@ -10,6 +10,8 @@ figma.ui.onmessage = pluginMessage => {
     const defaultVariant = postComponentSet.defaultVariant as ComponentNode;
     const defaultDark = figma.root.findOne(node => node.type == "COMPONENT" && node.name == "Image=none, Dark mode=true") as ComponentNode;
 
+    //let selectedVariant;
+
     if (pluginMessage.darkModeState) {
         switch(pluginMessage.imageVariant) {
             case "2":
